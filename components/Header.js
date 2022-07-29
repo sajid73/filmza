@@ -4,20 +4,23 @@ import {
   HomeIcon,
   LightningBoltIcon,
   SearchIcon,
-  UserIcon,
+  UserIcon
 } from "@heroicons/react/solid";
 import Image from "next/image";
-import HeaderItem from "./HeaderItem"
+import Link from "next/link";
+import HeaderItem from "./HeaderItem";
 
 export default function Header() {
   return (
     <header className="flex flex-col sm:flex-row m-5 justify-between items-center h-auto">
-      <Image
-        className="object-contain"
-        src="https://links.papareact.com/ua6"
-        width={200}
-        height={100}
-      />
+      <Link href="/">
+        <Image
+          className="object-contain"
+          src="/logo.png"
+          width={200}
+          height={100}
+        />
+      </Link>
       <div className="flex flex-grow justify-evenly max-w-2xl">
         <HeaderItem title="Home" Icon={HomeIcon} />
         <HeaderItem title="Trending" Icon={LightningBoltIcon} />
